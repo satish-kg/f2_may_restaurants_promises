@@ -1,9 +1,8 @@
-// Function to get the menu
+
 function getMenu() {
       fetch('https://raw.githubusercontent.com/saksham-accio/f2_contest_3/main/food.json')
       .then(response => response.json())
       .then(data => {
-          // Display the menu items on the webpage
           const menuDiv = document.createElement('div');
           menuDiv.setAttribute('id', 'menu');
           data.forEach(item => {
@@ -18,8 +17,8 @@ function getMenu() {
           console.log('Error fetching menu:', error);
       });
   }
-  
-  // Function to take the order
+
+
   function takeOrder() {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -30,8 +29,8 @@ function getMenu() {
       }, 2500);
     });
   }
-  
-  // Function for order preparation
+
+
   function orderPrep() {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -43,8 +42,8 @@ function getMenu() {
       }, 1500);
     });
   }
-  
-  // Function for payment
+
+
   function payOrder() {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -56,13 +55,13 @@ function getMenu() {
       }, 1000);
     });
   }
-  
-  // Function to display the thank you message
+
+
   function thankYou() {
     alert('Thank you for eating with us today!');
   }
-  
-  // Event listeners for the buttons
+
+
   document.getElementById('menuButton').addEventListener('click', getMenu);
   document.getElementById('orderButton').addEventListener('click', () => {
     takeOrder()
