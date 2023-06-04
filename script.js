@@ -6,12 +6,20 @@ function getMenu() {
           const menuDiv = document.createElement('div');
           menuDiv.setAttribute('id', 'menu');
           data.forEach(item => {
+          const cards = document.createElement('div');
+          cards.setAttribute('id', 'cards');
           const pics = document.createElement('img');
-          const menuItem = document.createElement('p');
           pics.src = item.imgSrc;
+          cards.appendChild(pics);
+          const itemDetailDiv = document.createElement('div');
+          itemDetailDiv.setAttribute('id', 'itemDetailDiv');
+          const menuItem = document.createElement('p');
+          menuItem.setAttribute('id', 'itemDetail');
           menuItem.textContent = item.name + ' - $' + item.price;
-          menuDiv.appendChild(pics);
-          menuDiv.appendChild(menuItem);
+          itemDetailDiv.appendChild(menuItem);
+          cards.appendChild(itemDetailDiv);
+
+          menuDiv.appendChild(cards);
           });
 //          const box = document.getElementsByClassName("dynamic-display");
           document.body.appendChild(menuDiv);
