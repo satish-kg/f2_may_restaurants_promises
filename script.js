@@ -6,11 +6,14 @@ function getMenu() {
           const menuDiv = document.createElement('div');
           menuDiv.setAttribute('id', 'menu');
           data.forEach(item => {
+          const pics = document.createElement('img');
           const menuItem = document.createElement('p');
+          pics.src = item.imgSrc;
           menuItem.textContent = item.name + ' - $' + item.price;
+          menuDiv.appendChild(pics);
           menuDiv.appendChild(menuItem);
           });
-          const box = document.getElementsByClassName("dynamic-display");
+//          const box = document.getElementsByClassName("dynamic-display");
           document.body.appendChild(menuDiv);
       })
       .catch(error => {
