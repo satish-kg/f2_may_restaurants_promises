@@ -19,17 +19,23 @@ body {
      display : flex;
      flex-direction: row;
      flex-wrap: wrap;
+     justify-content: center;
   }
   #menuDiv{
       display : flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
   }
   #cards{
+      margin : 10px;
       padding : 2px;
+      border-radius : 4px;
   }
   #cards :hover{
       transform: scale(1.1);
+      background-color: yellow;
+      border-radius: 6px;
   }
   
   button {
